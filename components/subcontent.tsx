@@ -88,7 +88,7 @@ const Subcontent = () => {
                             <span style={{fontSize: '0.8em'}}>( アドレスをクリックするかQRコードを読み取ってください。 )</span>
                             <div className={styles.line_contact}>
                                 <Image src={QRImage} width={50} height={50} />
-                                <a href="https://lin.ee/7tZpA9w" target="_blank">https://lin.ee/7tZpA9w</a>
+                                <a href="https://lin.ee/7tZpA9w" target="_blank" rel="noreferrer">https://lin.ee/7tZpA9w</a>
                             </div>
                         </li>
                     </ul>
