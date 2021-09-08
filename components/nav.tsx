@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import HomeIcon from '../public/fake.webp';
-import AboutIcon from '../public/fake.webp';
-import ChirashiIcon from '../public/fake.webp';
-import QuestionIcon from '../public/fake.webp';
-import ContactIcon from '../public/fake.webp';
+import HomeIcon from '../public/icon-home.png';
+import AboutIcon from '../public/icon-aboutme.png';
+import ChirashiIcon from '../public/icon-chirashi.png';
+import QuestionIcon from '../public/icon-question.png';
+import ContactIcon from '../public/icon-contact.png';
 import Link from 'next/link';
 import styles from '../styles/Nav.module.scss';
 import { useRouter } from 'next/dist/client/router';

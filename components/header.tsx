@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import headerImage from '../public/fake.webp';
+import headerImage from '../public/title-logo.png';
 import styles from '../styles/Header.module.scss';
 
 const Header = () => {
@@ -9,13 +9,15 @@ const Header = () => {
             <nav className={styles.navbar}>
                 <Link href="/">
                     <h1 className={styles.h1}>
-                        <Image
-                            className={styles.logo}
-                            src={headerImage}
-                            alt="大分市の初心者向けパソコン教室のアイコン"
-                            width={56}
-                            height={56}
-                        />
+                        <span className={styles.img_wrapper}>
+                            <Image
+                                className={styles.logo}
+                                src={headerImage}
+                                alt="大分市の初心者向けパソコン教室のアイコン"
+                                height={46}
+                                width={184}
+                            />
+                        </span>
                     </h1>
                 </Link>
             </nav>

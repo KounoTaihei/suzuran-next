@@ -3,6 +3,7 @@ import Header from "./header";
 import Nav from "./nav";
 import Subcontent from "./subcontent";
 import styles from '../styles/Main.module.scss';
+import UnderImageField from "./underImage";
 
 const Layout = ({ children }: Props) => {
     return (
@@ -19,6 +20,7 @@ const Layout = ({ children }: Props) => {
                     </div>
                 </div>
             </main>
+            <UnderImageField />
         </>
     )
 }

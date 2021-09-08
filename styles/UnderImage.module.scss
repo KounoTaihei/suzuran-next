@@ -1,0 +1,26 @@
+.under_image_field {
+    li {
+        list-style: none;
+
+        .img-wrapper {
+            position: fixed;
+            bottom: 0;
+
+            .under_image {
+                bottom: 0;
+                left: 0;
+                width: 100vw;
+                transform: translateY(100%);
+                transition-duration: 1s;
+                
+                &.rized {
+                    transform: translateY(0);
+                }
+                
+                &.done {
+                    opacity: 0.1;
+                }
+            }
+        }
+    }
+}

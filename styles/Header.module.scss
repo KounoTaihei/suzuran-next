@@ -12,9 +12,13 @@
             margin: 0;
             line-height: 1;
     
-            .logo {
-                height: 100%;
-                object-fit: contain;
+            .img_wrapper {
+                padding: 5px 0;
+                position: absolute;
+
+                .logo {
+                    object-fit: contain;
+                }
             }
         }
     }
