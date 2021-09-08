@@ -1,15 +1,26 @@
+@charset 'UTF-8';
+@import './variables';
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+  background-color: lighten($mainColor, 45%);
+  color: rgba(0, 0, 0, 0.6);
 }
 
-img {
-  max-height: 100%;
+@font-face {
+  font-family: "YuGothic M";
+  src: local("Yu Gothic Medium"),
+       local("Yu Gothic");
+  font-weight: 500;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.under-line {
+  border-bottom: 2px solid $mainColor;
 }

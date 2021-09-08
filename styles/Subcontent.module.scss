@@ -2,7 +2,9 @@
 
 .sub_content {
     background-color: rgba(255, 255, 255, 0.95);
-    margin-top: 20px;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 4px;
 
     .item {
         margin: 20px;
@@ -33,6 +35,8 @@
 
         // 休校日
         &.closed {
+            text-align: center;
+
             .item_body {
                 // 休校日のリスト
                 .closed_list {
