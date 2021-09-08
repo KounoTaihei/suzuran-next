@@ -87,7 +87,7 @@ const Subcontent = () => {
                             <span className={styles.line_color}><FontAwesomeIcon icon={faLine} className={styles.icon} /> LINE</span>でお問い合わせ<br></br>
                             <span style={{fontSize: '0.8em'}}>( アドレスをクリックするかQRコードを読み取ってください。 )</span>
                             <div className={styles.line_contact}>
-                                <Image src={QRImage} width={50} height={50} />
+                                <Image src={QRImage} width={75} height={75} />
                                 <a href="https://lin.ee/7tZpA9w" target="_blank" rel="noreferrer">https://lin.ee/7tZpA9w</a>
                             </div>
                         </li>
