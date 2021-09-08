@@ -49,7 +49,7 @@ const Nav = () => {
         <nav className={styles.nav}>
             <ul className={styles.nav_items}>
                 {items.map(item =>
-                    <li key={item.text} className={styles.nav_item}>
+                    <li key={item.text} className={router.pathname === item.link ? `${styles.nav_item} ${styles.active}` : styles.nav_item}>
                         <Link href={item.link}>
                             <a className={styles.nav_link}>
                                 <Image src={item.image} className={styles.nav_img} width={25} height={25} />

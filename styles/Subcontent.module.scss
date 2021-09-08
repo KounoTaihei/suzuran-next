@@ -1,0 +1,84 @@
+@import './variables';
+
+.sub_content {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin-top: 20px;
+
+    .item {
+        margin: 20px;
+
+        .item_name {
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;
+            border-bottom: 2px solid $mainColor;
+        }
+    
+        // 開講時間
+        &.opening {
+            .item_body {
+                .table {
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    .td {
+                        padding: 5px 10px;
+                    }
+                }
+            }
+        }
+
+        // 休校日
+        &.closed {
+            .item_body {
+                // 休校日のリスト
+                .closed_list {
+                    padding: 0 30px;
+
+                    .list_item {
+                        list-style: none;
+                        margin-bottom: 20px;
+
+                    }
+                }
+            }
+        }
+
+        // 住所
+        &.address {
+            .item_body {
+                .p {
+                    text-align: center;
+                }
+            }
+        }
+
+        // お問い合わせ
+        &.contact {
+            .item_body {
+                .ul {
+                    padding: 0;
+
+                    .li {
+                        list-style: circle inside;
+                        padding: 8px 0;
+
+                        .line_contact {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-evenly;
+                            align-items: center;
+                        }
+
+                        .line_color {
+                            color: rgb(0,185,0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

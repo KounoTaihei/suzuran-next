@@ -1,0 +1,16 @@
+.main {
+    padding: 20px;
+    margin-bottom: 20px;
+
+    .main_body {
+        display: flex;
+
+        .main_content {
+            width: 70%;
+        }
+
+        .sub_content {
+            width: 30%;
+        }
+    }
+}
