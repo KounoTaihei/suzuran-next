@@ -8,6 +8,7 @@ import underImage_4 from '../public/footer-city_c_4.png';
 
 const UnderImageField = () => {
     const [ rized, setRized ] = useState<number>(0);
+    const [ done, setDone ] = useState<boolean>(false);
 
     const images = [
         underImage_1,
@@ -50,9 +51,7 @@ const UnderImageField = () => {
                 for(let i = 0; i < image_items.length; i++){
                     image_items[i].classList.add('done');
                 }
-                if(document.getElementById('main-bgi')){
-                    document.getElementById('main-bgi')?.classList.add('done');
-                }
+                setDone(true);
             },timeout_seconds * 3)
         })
     }
@@ -72,9 +71,7 @@ const UnderImageField = () => {
                     </li>
                 )}
             </ul>
-            <div className="main-bgi-field">
-                <img src={`${process.env.PUBLIC_URL}/img/paint_orange.png`} className="main-bgi" id="main-bgi" />
-            </div>
+            <div className={done ? `${styles.main_bgi_field} ${styles.done}` : styles.main_bgi_field}></div>
         </>
     )
 }
