@@ -3,6 +3,9 @@ import styles from '../styles/Subcontent.module.scss';
 import Image from 'next/image';
 import mapImage from '../public/fake.webp';
 import QRImage from '../public/fake.webp';
+import { faPhoneSquare, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLine } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Subcontent = () => {
     const closedItem = [
@@ -78,10 +81,10 @@ const Subcontent = () => {
                 <p className={styles.item_name}>無料体験などのお問い合わせ</p>
                 <div className={styles.item_body}>
                     <ul className={styles.ul}>
-                        <li className={styles.li}><i className="fas fa-phone-square"></i> 097-579-6315</li>
-                        <li className={styles.li}><i className="far fa-envelope"></i> <Link href="/contact"><a>メールでお問い合わせ</a></Link></li>
+                        <li className={styles.li}><FontAwesomeIcon icon={faPhoneSquare} className={styles.icon} /> 097-579-6315</li>
+                        <li className={styles.li}><FontAwesomeIcon icon={faEnvelope} className={styles.icon} /> <Link href="/contact"><a>メールでお問い合わせ</a></Link></li>
                         <li className={styles.li}>
-                            <span className={styles.line_color}><i className="fab fa-line"></i> LINE</span>でお問い合わせ<br></br>
+                            <span className={styles.line_color}><FontAwesomeIcon icon={faLine} className={styles.icon} /> LINE</span>でお問い合わせ<br></br>
                             <span style={{fontSize: '0.8em'}}>( アドレスをクリックするかQRコードを読み取ってください。 )</span>
                             <div className={styles.line_contact}>
                                 <Image src={QRImage} width={50} height={50} />
