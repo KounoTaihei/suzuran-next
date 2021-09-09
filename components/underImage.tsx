@@ -10,13 +10,6 @@ const UnderImageField = () => {
     const [ rized, setRized ] = useState<number>(0);
     const [ done, setDone ] = useState<boolean>(false);
 
-    const images = [
-        underImage_1,
-        underImage_2,
-        underImage_3,
-        underImage_4
-    ];
-
     // 秒数の設定
     const timeout_seconds = 400;
 
@@ -62,15 +55,12 @@ const UnderImageField = () => {
 
     return(
         <>
-            <ul className={styles.under_image_field}>
-                {images.map((image, i) =>
-                    <li key={i}>
-                        <span className={styles.img_wrapper}>
-                            <Image src={image} className={styles.under_image} />
-                        </span>
-                    </li>
-                )}
-            </ul>
+            <div className={done ? `${styles.wrapper} ${styles.done}` : styles.wrapper}>
+                <div className={rized > 0 ? `${styles.under_image} ${styles.rized}` : styles.under_image}></div>
+                <div className={rized > 1 ? `${styles.under_image} ${styles.rized}` : styles.under_image}></div>
+                <div className={rized > 2 ? `${styles.under_image} ${styles.rized}` : styles.under_image}></div>
+                <div className={rized > 3 ? `${styles.under_image} ${styles.rized}` : styles.under_image}></div>
+            </div>
             <div className={done ? `${styles.main_bgi_field} ${styles.done}` : styles.main_bgi_field}></div>
         </>
     )
