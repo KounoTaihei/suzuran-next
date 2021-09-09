@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { NextPage } from 'next'
 import Content from '../components/content';
 import shoukaiImage from '../public/001.png';
+import instructorImage from '../public/1594192173.png';
 import styles from '../styles/Index.module.scss';
 
 const Home: NextPage = () => {
@@ -110,7 +111,26 @@ const Home: NextPage = () => {
 
   /** インストラクター紹介部分 */
   const Instructor = () => {
-    
+    const text = (
+      <p>
+          こんにちは。教室長の河野（こうの）です。<br></br><br></br>
+          <span className="under-line">パソコン初心者</span>の方や、習い事をしたいけど何をしたらいいかと迷っている方、パソコンを始めてみませんか？<br></br><br></br>
+          パソコンが使えるようになると、色々な事ができるようになって楽しいですよ。やりたい事を実現できるように、<span className="under-line">全力でサポートさせて頂きます！</span><br></br><br></br>
+          同じ事でも何度も聞いてくださいね。笑顔でお答えいたします！
+      </p>
+    );
+
+    return (
+      <>
+        <Content
+            className = 'instructor'
+            contentTitle = 'インストラクター紹介'
+            text = {text}
+            image = {instructorImage}
+            alt = "インストラクターの画像"
+        />
+      </>
+    )
   }
 
   return (
@@ -118,6 +138,7 @@ const Home: NextPage = () => {
       <div className={styles.index}>
         <Shoukai />
         <Tokucho />
+        <Instructor />
       </div>
     </>
   )
