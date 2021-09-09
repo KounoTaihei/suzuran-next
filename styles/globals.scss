@@ -23,3 +23,13 @@ body {
 .under-line {
   border-bottom: 2px solid $mainColor;
 }
+
+.bold_font {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.color_font {
+  color: $mainColor;
+  font-weight: bold;
+}

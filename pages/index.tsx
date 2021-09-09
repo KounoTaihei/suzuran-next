@@ -1,6 +1,7 @@
 import { faCheckCircle, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { NextPage } from 'next'
+import Head from 'next/head';
 import Content from '../components/content';
 import shoukaiImage from '../public/001.png';
 import instructorImage from '../public/1594192173.png';
@@ -27,7 +28,6 @@ const Home: NextPage = () => {
     return (
       <>
         <Content
-            className = 'school-introduction'
             contentTitle = '教室の紹介'
             text = {text}
             image = {shoukaiImage}
@@ -101,7 +101,6 @@ const Home: NextPage = () => {
     return (
       <>
         <Content
-          className="school_detail"
           contentTitle="教室の特徴"
           text={text}
         />
@@ -123,7 +122,6 @@ const Home: NextPage = () => {
     return (
       <>
         <Content
-            className = 'instructor'
             contentTitle = 'インストラクター紹介'
             text = {text}
             image = {instructorImage}
@@ -135,6 +133,9 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>index page</title>
+      </Head>
       <div className={styles.index}>
         <Shoukai />
         <Tokucho />

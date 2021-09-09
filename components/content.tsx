@@ -16,7 +16,7 @@ const Content = (props: Props) => {
     }
 
     return (
-        <div className={`${styles.content} ${styles[props.className]}`}>
+        <div className={styles.content}>
             <h3 className={styles.content_title}>{props.contentTitle}</h3>
             {/* 画像がある場合はflexクラスを追加 */}
             <div className={props.image ? `${styles.content_body} ${styles.flex}` : styles.content_body}>
@@ -32,7 +32,6 @@ const Content = (props: Props) => {
 export default Content;
 
 interface Props {
-    className: string
     contentTitle: string
     text: ReactElement
     image?: StaticImageData
