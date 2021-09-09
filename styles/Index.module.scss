@@ -1,0 +1,23 @@
+@import '../styles/variables';
+
+.index {
+    // 教室特徴部分
+    .school_detail_items {
+        margin: 0;
+        padding: 0;
+
+        .detail_item {
+            list-style: none;
+
+            .detail_item_title {
+                color: darken($mainColor, 10%);
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+
+            .detail_item_content {
+                margin-left: 20px;
+            }
+        }
+    }
+}

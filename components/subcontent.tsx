@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import styles from '../styles/Subcontent.module.scss';
 import Image from 'next/image';
-import mapImage from '../public/fake.webp';
-import QRImage from '../public/fake.webp';
+import mapImage from '../public/Map01.jpg';
+import QRImage from '../public/LINE_QRCode.png';
 import { faPhoneSquare, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLine } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -73,7 +73,7 @@ const Subcontent = () => {
                         大分市山津町1-11-5<br></br>
                         玉井コーポ101号
                     </p>
-                    <Image src={mapImage} />
+                    <Image src={mapImage} alt="教室の地図の画像" loading="lazy" />
                 </div>
             </div>
             {/* お問い合わせ */}
@@ -87,7 +87,7 @@ const Subcontent = () => {
                             <span className={styles.line_color}><FontAwesomeIcon icon={faLine} className={styles.icon} /> LINE</span>でお問い合わせ<br></br>
                             <span style={{fontSize: '0.8em'}}>( アドレスをクリックするかQRコードを読み取ってください。 )</span>
                             <div className={styles.line_contact}>
-                                <Image src={QRImage} width={75} height={75} />
+                                <Image src={QRImage} width={75} height={75} alt="LINEのQRコードの画像" loading="lazy" />
                                 <a href="https://lin.ee/7tZpA9w" target="_blank" rel="noreferrer">https://lin.ee/7tZpA9w</a>
                             </div>
                         </li>

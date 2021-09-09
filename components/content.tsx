@@ -9,7 +9,7 @@ const Content = (props: Props) => {
         if(props.image){
             return (
                 <div className={styles.image_field}>
-                    <Image src={props.image} loading="lazy" />
+                    <Image src={props.image} alt={props.alt} loading="lazy" />
                 </div>
             )
         }
@@ -36,4 +36,5 @@ interface Props {
     contentTitle: string
     text: ReactElement
     image?: StaticImageData
+    alt?: string
 }
