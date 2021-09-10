@@ -14,3 +14,22 @@
         }
     }
 }
+
+@media screen and (max-width: 540px) {
+    .main {
+        padding: 10px;
+
+        .main_body {
+            flex-direction: column;
+            width: 100%;
+            
+            .main_content {
+                width: 100;
+            }
+            
+            .sub_content {
+                width: 100%;
+            }
+        }
+    }
+}

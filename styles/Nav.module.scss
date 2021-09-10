@@ -13,6 +13,21 @@
         .nav_item {
             list-style: none;
 
+            &.active {
+                .nav_link {
+                    pointer-events: none;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                .nav_text {
+                    font-weight: bold;
+                    color: $mainColor;
+                }
+            }
+
             .nav_link {
                 padding: 2px;
                 color: inherit;
@@ -49,21 +64,12 @@
                     margin: 0 0 0 5px;
                 }
             }
-
-            &.active {
-                .nav_img {
-                    pointer-events: none;
-
-                    &::after {
-                        width: 100%;
-                    }
-                }
-
-                .nav_text {
-                    font-weight: bold;
-                    color: $mainColor;
-                }
-            }
         }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .nav_text {
+        display: none;
     }
 }
