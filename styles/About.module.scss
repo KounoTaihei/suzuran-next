@@ -1,12 +1,12 @@
 @import '../styles/variables';
 
-.about {
-    // コース紹介部分
-    .courses_title_space {
+// コース紹介部分
+.courses {
+    &_title_space {
         margin-bottom: 5px;
         text-align: center;
         margin: 0 auto;
-
+        
         .p {
             margin: 0 auto;
             padding: 10px;
@@ -16,71 +16,76 @@
     .table {
         color: inherit;
         text-align: center;
+        padding: 30px;
+        
+        .tr {
+            .th {
+                color: darken($mainColor, 10%);
+            }
+            
+            .td {
+                padding: 0 30px;
+            }
+        }
+    }
+}
 
-            .tr {
-                .th {
-                    color: darken($mainColor, 10%);
+// 料金体系部分
+.fee {
+    &_heading {
+    margin-bottom: 30px;
+
+    &_table {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+
+        tr {
+            th {
+                h4 {
+                    font-size: 1.6em;
+                    font-weight: bold;
+                    vertical-align: middle;
+                    margin: 0;
+                }
+            }
+
+            td {
+                img {
+                    margin-left: 10px;
+                    vertical-align: middle;
+                    width: 40px;
+                    object-fit: contain;
                 }
             }
         }
     }
 
-    // 料金体系部分
-    .fee {
-        &_heading {
-        margin-bottom: 30px;
-
-        &_table {
+    &_text {
+        text-align: center;
+        font-weight: bold;
+        
+        .under_line_text {
+            font-size: 1.3em;
+            border-bottom: 2px solid red;
             width: fit-content;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 20px;
-
-            tr {
-                th {
-                    h4 {
-                        font-size: 1.6em;
-                        font-weight: bold;
-                        vertical-align: middle;
-                        margin: 0;
-                    }
-                }
-
-                td {
-                    img {
-                        margin-left: 10px;
-                        vertical-align: middle;
-                        width: 40px;
-                        object-fit: contain;
-                    }
-                }
-            }
         }
 
-        &_text {
-            text-align: center;
-            font-weight: bold;
-            
-            .under_line_text {
-                font-size: 1.3em;
-                border-bottom: 2px solid red;
-                width: fit-content;
-                margin-left: auto;
-                margin-right: auto;
-            }
+        .border_text {
+            font-size: 2em;
+            color: rgb(245, 220, 79);
+            -webkit-text-stroke: 2px #000;
+        }
 
-            .border_text {
-                font-size: 2em;
-                color: rgb(245, 220, 79);
-                -webkit-text-stroke: 2px #000;
-            }
-
-            .color_text {
-                font-size: 1.6em;
-                color: $mainColor;
-            }
+        .color_text {
+            font-size: 1.6em;
+            color: $mainColor;
         }
     }
+}
 
     &_body {
         &_list {
@@ -150,5 +155,26 @@
         .star {
             color: gold;
         }
+    }
+}
+// 時間割部分
+.timetable {
+    text-align: center;
+
+    .table {
+        margin: 0 auto;
+        padding: 15px;
+
+        .thead {
+            th {
+                font-size: 1.1em;
+                color: $mainColor;
+                padding: 5px;
+            }
+        }
+    }
+
+    .color_red {
+        color: red;
     }
 }

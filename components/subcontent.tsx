@@ -3,7 +3,7 @@ import styles from '../styles/Subcontent.module.scss';
 import Image from 'next/image';
 import mapImage from '../public/Map01.jpg';
 import QRImage from '../public/LINE_QRCode.png';
-import { faPhoneSquare, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPhoneSquare, faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons';
 import { faLine } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -52,6 +52,11 @@ const Subcontent = () => {
                         <tr><td className={styles.td} colSpan={2}>不定休</td></tr>
                     </table>
                 </div>
+                <Link href="/about#timetable">
+                    <a className={styles.link}>
+                        <FontAwesomeIcon icon={faLink} /> 詳しい時間割
+                    </a>
+                </Link>
             </div>
             {/* 休校日 */}
             <div className={`${styles.item} ${styles.closed}`}>

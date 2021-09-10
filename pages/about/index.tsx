@@ -69,7 +69,7 @@ const About = () => {
         ];
 
         const text = (
-            <>
+            <div className={styles.courses}>
                 <div className={styles.courses_title_space}>
                     <p className={styles.p}><span className="bold_font">個別に選べる授業内容</span> (※どの内容でも料金は同じです)</p>
                     <p className={styles.p}>
@@ -84,13 +84,13 @@ const About = () => {
                         {table_items.map((item, i) =>
                             <tr key={i} className={styles.tr}>
                                 <th className={styles.th}><p>{i + 1}. {item.thText}</p></th>
-                                <td><p>{item.tdText}</p></td>
+                                <td><p className={styles.td}>{item.tdText}</p></td>
                             </tr>
                         )}
                         <tr><td colSpan={2} style={{textAlign:'right'}}>などなど</td></tr>
                     </tbody>
                 </table>
-            </>
+            </div>
         );
 
         return (
@@ -244,10 +244,75 @@ const About = () => {
         )
     }
 
+    /** 時間割 */
+    const TimeTable = () => {
+        const text = (
+            <div className={styles.timetable} id="timetable">
+                <div>
+                    当パソコン教室では、<span className="bold_font">１人１台</span>パソコンを使用<br></br>
+                    授業をそれぞれのペースで進めます。
+                </div>
+                <table className={styles.table}>
+                    <thead className={styles.thead}>
+                        <tr><th colSpan={2}>レッスン時間（月・水・木）</th></tr>
+                    </thead>
+                    <tbody className={styles.tbody}>
+                        <tr><th>1時限目</th><td>10：00～10：50</td></tr>
+                        <tr><th>2時限目</th><td>11：00～11：50</td></tr>
+                        <tr><td colSpan={2}>休憩</td></tr>
+                        <tr><th>3時限目</th><td>13：00～13：50</td></tr>
+                        <tr><th>4時限目</th><td>14：00～14：50</td></tr>
+                        <tr><th>5時限目</th><td>15：00～15：50</td></tr>
+                        <tr><td colSpan={2}>休憩</td></tr>
+                        <tr><th>6時限目</th><td>17：00～17：50</td></tr>
+                        <tr><th>7時限目</th><td>18：00～18：50</td></tr>
+                        <tr><th>8時限目</th><td>19：00～19：50</td></tr>
+                    </tbody>
+                </table>
+                <table className={styles.table}>
+                    <thead className={styles.thead}>
+                        <tr><th colSpan={2}>レッスン時間（火）</th></tr>
+                    </thead>
+                    <tbody className={styles.tbody}>
+                        <tr><th>1時限目</th><td>10：00～10：50</td></tr>
+                        <tr><th>2時限目</th><td>11：00～11：50</td></tr>
+                    </tbody>
+                </table>
+                <table className={styles.table}>
+                    <thead className={styles.thead}>
+                        <tr><th colSpan={2}>レッスン時間（金・土・日）</th></tr>
+                    </thead>
+                    <tbody className={styles.tbody}>
+                        <tr><th>1時限目</th><td>10：00～10：50</td></tr>
+                        <tr><th>2時限目</th><td>11：00～11：50</td></tr>
+                        <tr><td colSpan={2}>休憩</td></tr>
+                        <tr><th>3時限目</th><td>13：00～13：50</td></tr>
+                        <tr><th>4時限目</th><td>14：00～14：50</td></tr>
+                        <tr><th>5時限目</th><td>15：00～15：50</td></tr>
+                    </tbody>
+                </table>
+                <div>
+                    ※<span className={styles.color_red}>１レッスン５０分</span>です。1日2レッスン以上の受講・追加レッスンも可能です。<br></br>
+                    ※学習日・学習時間の振替も可能です。 
+                </div>
+            </div>
+        );
+
+        return (
+            <>
+                <Content
+                    contentTitle="時間割"
+                    text={text}
+                />
+            </>
+        )
+    }
+
     return (
         <div className={styles.about}>
             <Course />
             <Fee />
+            <TimeTable />
         </div>
     )
 }
