@@ -8,7 +8,7 @@ const Make = () => {
     const Chirashi = () => {
         const text = (
             <div className={styles.chirashi}>
-                <p>無料見積いたします。ご相談ください。</p>
+                <p className="bold_font">無料見積いたします。ご相談ください。</p>
                 <p>↓すずらんのちらしです</p>
                 <div className={styles.image_wrapper}>
                     <span>（表）</span>

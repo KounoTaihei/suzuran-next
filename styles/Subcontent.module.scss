@@ -8,6 +8,7 @@
 
     .item {
         margin: 20px;
+        padding: 10px;
 
         .item_name {
             margin-bottom: 12px;
@@ -60,6 +61,10 @@
             .item_body {
                 .p {
                     text-align: center;
+                }
+
+                .google {
+                    float: right;
                 }
             }
         }
