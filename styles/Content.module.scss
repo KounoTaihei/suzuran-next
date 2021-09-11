@@ -28,17 +28,12 @@
         }
 
         .image_field {
-            width: 50%;
             padding: 30px;
             text-align: center;
         }
 
         .text_field {
             padding: 15px 30px;
-
-            &.flex {
-                width: 50%;
-            }
         }
     }
 
@@ -51,6 +46,47 @@
     &:nth-child(odd) {
         .content_body {
             flex-direction: row;
+        }
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .content_body {
+        .image_field {
+            width: 50%;
+        }
+
+        .text_field.flex {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .content {
+        padding: 10px;
+        margin: 10px 0;
+
+        .content_body {
+            padding: 0;
+
+            &.flex {
+                flex-direction: column;
+            }
+
+            .image_field {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .text-field {
+                padding: 0;
+                width: 100%;
+                
+                &.flex {
+                    width: 100%;
+                }
+            }
         }
     }
 }

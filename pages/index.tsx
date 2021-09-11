@@ -90,7 +90,7 @@ const Home: NextPage = () => {
         {items.map((item, i) =>
           <li key={i} className={styles.detail_item}>
             <p className={styles.detail_item_title}><FontAwesomeIcon icon={faCheckCircle} /> {item.title}</p>
-            <p className={styles.detail_item_content}>
+            <p>
                 {item.content}
             </p>
           </li>

@@ -14,10 +14,12 @@
                 font-size: 1.1em;
                 font-weight: bold;
             }
-
-            .detail_item_content {
-                margin-left: 20px;
-            }
         }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .detail_item_title {
+        text-align: center;
     }
 }
