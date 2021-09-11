@@ -1,0 +1,15 @@
+.make {
+    .chirashi {
+        text-align: center;
+
+        .image_wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+}
