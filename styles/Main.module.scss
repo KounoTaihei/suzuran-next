@@ -13,6 +13,10 @@
             width: 30%;
         }
     }
+
+    .scroll {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -29,6 +33,29 @@
             
             .sub_content {
                 width: 100%;
+            }
+        }
+
+        .scroll {
+            display: inherit;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 0.5em;
+            width: 51px;
+            height: 51px;
+            text-align: center;
+            border-radius: 50%;
+            position: fixed;
+            right: 10px;
+            bottom: 10vh;
+            font-size: 1.5em;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            
+            &.active {
+                opacity: 0.8;
+                visibility: visible;
             }
         }
     }
