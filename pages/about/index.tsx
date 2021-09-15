@@ -109,18 +109,20 @@ const About = () => {
             return(
                 <div className={styles.fee_heading}>
                     <table className={styles.fee_heading_table}>
-                        <tr>
-                            <th><h4>・ 初回のみ入会金</h4></th>
-                            <td><Image src={firstFeeImage} alt="入会金の画像" loading="lazy" /></td>
-                        </tr>
-                        <tr>
-                            <th><h4>・ 教科書代金</h4></th>
-                            <td><Image src={textBookImage} alt="教科書代金の画像" loading="lazy" /></td>
-                        </tr>
-                        <tr>
-                            <th><h4>・ 月々の月謝</h4></th>
-                            <td><Image src={monthlyFeeImage} alt="月謝の画像" loading="lazy" /></td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th><h4 className={styles.h4}>・ 初回のみ入会金</h4></th>
+                                <td><Image src={firstFeeImage} alt="入会金の画像" loading="lazy" /></td>
+                            </tr>
+                            <tr>
+                                <th><h4 className={styles.h4}>・ 教科書代金</h4></th>
+                                <td><Image src={textBookImage} alt="教科書代金の画像" loading="lazy" /></td>
+                            </tr>
+                            <tr>
+                                <th><h4 className={styles.h4}>・ 月々の月謝</h4></th>
+                                <td><Image src={monthlyFeeImage} alt="月謝の画像" loading="lazy" /></td>
+                            </tr>
+                        </tbody>
                     </table>
                     <div className={styles.fee_heading_text}>
                         <div className={styles.under_line_text}>設備維持料金、駐車場料金等、パソコン使用料</div>
@@ -247,7 +249,7 @@ const About = () => {
     /** 時間割 */
     const TimeTable = () => {
         const text = (
-            <div className={styles.timetable} id="timetable">
+            <div className={styles.timetable}>
                 <div>
                     当パソコン教室では、<span className="bold_font">１人１台</span>パソコンを使用<br></br>
                     授業をそれぞれのペースで進めます。
@@ -303,6 +305,7 @@ const About = () => {
                 <Content
                     contentTitle="時間割"
                     text={text}
+                    id="timetable"
                 />
             </>
         )

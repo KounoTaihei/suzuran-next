@@ -13,3 +13,13 @@
         }
     }
 }
+
+@media screen and (max-width: 540px) {
+    .make {
+        .chirashi {
+            .image_wrapper {
+                padding: 0;
+            }
+        }
+    }
+}

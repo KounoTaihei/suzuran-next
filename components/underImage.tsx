@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from '../styles/UnderImage.module.scss';
-import Image from 'next/image';
-import underImage_1 from '../public/footer-city_c_1.png';
-import underImage_2 from '../public/footer-city_c_2.png';
-import underImage_3 from '../public/footer-city_c_3.png';
-import underImage_4 from '../public/footer-city_c_4.png';
 
 const UnderImageField = () => {
     const [ rized, setRized ] = useState<number>(0);

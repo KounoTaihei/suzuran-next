@@ -46,10 +46,12 @@ const Subcontent = () => {
                 <p className={styles.item_name}>開講時間</p>
                 <div className={styles.item_body}>
                     <table className={styles.table}>
-                        <tr><td className={styles.td}>月・水・木</td><td className={styles.td}>10:00～19:50</td></tr>
-                        <tr><td className={styles.td}>火・第４、５日曜日</td><td className={styles.td}>10:00～11:50</td></tr>
-                        <tr><td className={styles.td}>金・土・日</td><td className={styles.td}>10:00〜15:50</td></tr>
-                        <tr><td className={styles.td} colSpan={2}>不定休</td></tr>
+                        <tbody>
+                            <tr><td className={styles.td}>月・水・木</td><td className={styles.td}>10:00～19:50</td></tr>
+                            <tr><td className={styles.td}>火・第４、５日曜日</td><td className={styles.td}>10:00～11:50</td></tr>
+                            <tr><td className={styles.td}>金・土・日</td><td className={styles.td}>10:00〜15:50</td></tr>
+                            <tr><td className={styles.td} colSpan={2}>不定休</td></tr>
+                        </tbody>
                     </table>
                 </div>
                 <Link href="/about#timetable">
