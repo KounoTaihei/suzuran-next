@@ -1,7 +1,11 @@
+
+import { faCommentDots, faEnvelope, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Formik } from 'formik';
 import { useState } from 'react';
 import * as Yup from 'yup';
 import Content from '../../components/content';
+import styles from '../../styles/Contact.module.scss';
 
 const apiUrl = process.env.SENDMAIL_API_URL!;
 
@@ -32,7 +36,7 @@ const Contact = () => {
 
     const text = (
         <>
-            <div>
+            <div className={styles.contact}>
                 <Formik
                     initialValues={initialValues}
                     onSubmit={async (values) => {
@@ -41,8 +45,8 @@ const Contact = () => {
                     validationSchema={validationSchema}
                     render={(props) => (
                         <form action={apiUrl} method="POST">
-                            <div>
-                                <label htmlFor="_replyto">メールアドレス</label>
+                            <div className={styles.formControl}>
+                                <label htmlFor="_replyto" className={styles.label}><FontAwesomeIcon icon={faEnvelope} />メールアドレス</label>
                                 <input
                                     id="_replyto"
                                     name="_replyto"
@@ -50,26 +54,30 @@ const Contact = () => {
                                     value={props.values._replyto}
                                     onChange={props.handleChange}
                                     onBlur={props.handleBlur}
+                                    className={props.errors._replyto && props.touched._replyto ? `${styles.textInput} ${styles.error}` : styles.textInput}
                                 />
                                 {(props.errors._replyto && props.touched._replyto) && (
-                                    <span>{props.errors._replyto}</span>
+                                    <span className={styles.error_msg}><FontAwesomeIcon icon={faExclamationCircle} />{props.errors._replyto}</span>
                                 )}
                             </div>
-                            <div>
-                                <label htmlFor="message">メッセージ</label>
+                            <div className={styles.formControl}>
+                                <label htmlFor="message" className={styles.label}><FontAwesomeIcon icon={faCommentDots} />メッセージ</label>
                                 <textarea
                                     id="message"
                                     name="message"
                                     value={props.values.message}
                                     onChange={props.handleChange}
                                     onBlur={props.handleBlur}
+                                    className={props.errors.message && props.touched.message ? `${styles.textArea} ${styles.error}` : styles.textArea}
                                 ></textarea>
                                 {(props.errors.message && props.touched.message) && (
-                                    <span>{props.errors.message}</span>
+                                    <span className={styles.error_msg}><FontAwesomeIcon icon={faExclamationCircle} />{props.errors.message}</span>
                                 )}
                             </div>
-                            <button type="button" onClick={props.handleReset}>取消</button>
-                            <button type="submit" disabled={getDisabled(props.errors, props.touched)}>送信</button>
+                            <div className={styles.actions}>
+                                <button type="button" onClick={props.handleReset} className={styles.cancel}>入力を削除</button>
+                                <button type="submit" disabled={getDisabled(props.errors, props.touched)} className={getDisabled(props.errors, props.touched) ? `${styles.submit} ${styles.disabled}` : styles.submit}>送信</button>
+                            </div>
                         </form>
                     )}
                 />

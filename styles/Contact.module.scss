@@ -1,0 +1,119 @@
+@import '../styles/variables';
+
+$errorColor: rgb(212, 104, 104);
+
+.contact {
+    text-align: center;
+
+    .formControl {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 0 auto;
+
+        .label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                font-size: 1.2em;
+                margin-right: 5px;
+            }
+        }
+
+        .textInput {
+            width: 70%;
+            margin: 5px auto;
+            padding: 0.3rem;
+
+            &.error {
+                border: $errorColor solid 2px;
+                outline: none;
+                border-radius: 4px;
+            }
+
+            &:focus {
+                border: lighten($mainColor, 10%) solid 2px;
+                outline: none;
+                border-radius: 4px;
+            }
+        }
+        
+        .textArea {
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 8rem;
+            padding: 0.3rem;
+            margin: 5px 0;
+
+            &.error {
+                border: $errorColor solid 2px;
+                outline: none;
+                border-radius: 4px;
+            }
+
+            &:focus {
+                border: lighten($mainColor, 10%) solid 2px;
+                outline: none;
+                border-radius: 4px;
+            }
+        }
+
+        .error_msg {
+            color: $errorColor;
+            font-size: 0.8em;
+            padding: 0.5rem;
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+        
+        .cancel {
+            padding: 0.8rem 1.5rem;
+            margin: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            background-color: gray;
+            color: #fff;
+            
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+        
+        .submit {
+            background-color: lighten($mainColor, 0%);
+            padding: 0.8rem 1.5rem;
+            margin: 0.5rem 1rem;
+            color: #fff;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            
+            &:hover {
+                opacity: 0.9;
+            }
+            
+            &.disabled {
+                opacity: 0.5;
+                cursor: inherit;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .contact {
+        .formControl {
+            width: 100%;
+
+            .textInput {
+                width: 80%;
+            }
+        }
+    }
+}
