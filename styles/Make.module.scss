@@ -5,20 +5,10 @@
         .image_wrapper {
             display: flex;
             flex-direction: column;
-            padding: 30px;
+            padding: 1rem;
 
             img {
                 object-fit: contain;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 540px) {
-    .make {
-        .chirashi {
-            .image_wrapper {
-                padding: 0;
             }
         }
     }

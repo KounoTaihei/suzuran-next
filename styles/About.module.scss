@@ -44,7 +44,7 @@
         tr {
             th {
                 .h4 {
-                    font-size: 1.6em;
+                    font-size: 1.5rem;
                     font-weight: bold;
                     vertical-align: middle;
                     margin: 0;
@@ -68,7 +68,7 @@
         
         .under_line_text {
             font-size: 1.3em;
-            border-bottom: 2px solid red;
+            text-decoration: underline red 2px;
             width: fit-content;
             margin-left: auto;
             margin-right: auto;
@@ -93,10 +93,11 @@
             width: fit-content;
             margin-left: auto;
             margin-right: auto;
+            padding: 0.5rem;
 
             &_item {
                 &:not(:last-child) {
-                    margin-bottom: 30px;
+                    margin-bottom: 40px;
                 }
 
                 .flex {
@@ -135,7 +136,6 @@
                         }
                     }
                 }
-
 
                 p {
                     margin: 0 0 0 5px;
@@ -206,7 +206,63 @@
         &_heading {
             &_table {
                 .h4 {
-                    font-size: 0.5em;
+                    font-size: 1em;
+                }
+            }
+
+            &_text {
+                .under_line_text {
+                    font-size: 1.1em;
+                }
+        
+                .border_text {
+                    font-size: 1.6em;
+                    -webkit-text-stroke: 1px #000;
+                }
+        
+                .color_text {
+                    font-size: 1.4em;
+                }
+            }
+        }
+
+        &_body {
+            &_list {
+                margin-left: auto;
+                margin-right: auto;
+    
+                &_item {
+                    .flex {
+                        .relative {
+                            .fee_body_text_heading {
+                                top: -22px;
+                            }
+                        }
+    
+                        img {
+                            width: 30px;
+                        }
+    
+                        h5 {
+                            font-size: 1.1em;
+                            margin: 0;
+                            padding-left: 15px;
+    
+                            .fee_body_fee {
+                                font-size: 1.2em;
+                                padding: 0;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+    
+    
+                    p {
+                        margin: 0 0 0 5px;
+                        color: $mainColor;
+                        font-weight: bold;
+                        text-align: center;
+                    }
                 }
             }
         }

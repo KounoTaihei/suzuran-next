@@ -220,7 +220,7 @@ const About = () => {
                         『回数』は『１ヶ月あたりの回数』ですので、１ヶ月以内の消化をお願いします。<br></br><br></br>
                         一番最高の割引きはなんと１コマ950円！！！！！<br></br>
                         <span className={styles.star}>☆</span> お得な家族割もあります!!（それぞれの月謝料から1割引き）<br></br><br></br>
-                        詳しくはお電話下さい！ <span className="color_font">097-579-6315</span>
+                        詳しくはお電話下さい！ <a href="tel:097-579-6315"><span className="color_font">097-579-6315</span></a>
                     </p>
                 </div>
             );

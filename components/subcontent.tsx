@@ -91,7 +91,7 @@ const Subcontent = () => {
                 <p className={styles.item_name}>無料体験などのお問い合わせ</p>
                 <div className={styles.item_body}>
                     <ul className={styles.ul}>
-                        <li className={styles.li}><FontAwesomeIcon icon={faPhoneSquare} className={styles.icon} /> 097-579-6315</li>
+                        <li className={styles.li}><a href="tel:097-579-6315"><FontAwesomeIcon icon={faPhoneSquare} className={styles.icon} /> 097-579-6315</a></li>
                         <li className={styles.li}><FontAwesomeIcon icon={faEnvelope} className={styles.icon} /> <Link href="/contact"><a>メールでお問い合わせ</a></Link></li>
                         <li className={styles.li}>
                             <span className={styles.line_color}><FontAwesomeIcon icon={faLine} className={styles.icon} /> LINE</span>でお問い合わせ<br></br>

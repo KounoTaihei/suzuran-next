@@ -12,11 +12,11 @@ const Make = () => {
                 <p>↓すずらんのちらしです</p>
                 <div className={styles.image_wrapper}>
                     <span>（表）</span>
-                    <Image src={chirashiImage_1} width={700} height={500} loading="lazy" />
+                    <Image src={chirashiImage_1} alt="すずらんのちらしの画像" width={700} height={500} loading="lazy" />
                 </div>
                 <div className={styles.image_wrapper}>
                     <span>（裏）</span>
-                    <Image src={chirashiImage_2} width={700} height={500} loading="lazy" />
+                    <Image src={chirashiImage_2} alt="すずらんのちらしの画像の裏面" width={700} height={500} loading="lazy" />
                 </div>
             </div>
         );
@@ -37,7 +37,7 @@ const Make = () => {
                 <p className="bold_font">無料見積いたします。ご相談ください。</p>
                 <p>↓すずらんのPR映像です</p>
                 <div className={styles.image_wrapper}>
-                    <Image src={chirashiImage_1} width={700} height={500} loading="lazy" />
+                    <Image src={chirashiImage_1} alt="" width={700} height={500} loading="lazy" />
                 </div>
             </div>
         )

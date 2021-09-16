@@ -37,10 +37,10 @@
             transition: 0.3s;
             opacity: 0;
             visibility: hidden;
-            transform: scale(1, 0);
             height: 0;
             margin: 0;
             padding: 0;
+            overflow: hidden;
 
             &.open {
                 height: auto;
@@ -49,7 +49,6 @@
                 margin: 0.5rem;
                 padding: 0.9rem;
                 height: auto;
-                transform: scale(1, 1);
             }
         }
 
@@ -63,6 +62,26 @@
 
             &.open svg {
                 transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .questions {
+        .baloon {
+            margin-left: 0;
+            margin-right: 0;
+
+            &.answer {
+                &.open {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+
+            .iconWrapper {
+                margin: 0 5px 0 0;
             }
         }
     }
