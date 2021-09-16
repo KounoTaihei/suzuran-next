@@ -1,9 +1,9 @@
 import { faCheckCircle, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import Content from '../components/content';
-import shoukaiImage from '../public/001.png';
+import shoukaiImage from '../public/image_course.jpeg';
 import instructorImage from '../public/1594192173.png';
 import styles from '../styles/Index.module.scss';
 

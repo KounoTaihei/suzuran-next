@@ -1,0 +1,35 @@
+.questions {
+    .color {
+        color: red;
+    }
+
+    .baloon {
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        
+        &.question {
+            justify-content: space-between;
+            background-color: #e0edff;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &.answer {
+            background-color: rgb(250, 214, 220);
+        }
+
+        .iconWrapper {
+            margin: 0 5px;
+            font-size: 1.2em;
+
+            &.open svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

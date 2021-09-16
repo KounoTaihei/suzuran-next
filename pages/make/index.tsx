@@ -7,7 +7,7 @@ import Content from '../../components/content';
 const Make = () => {
     const Chirashi = () => {
         const text = (
-            <div className={styles.chirashi}>
+            <div className={styles.wrapper}>
                 <p className="bold_font">無料見積いたします。ご相談ください。</p>
                 <p>↓すずらんのちらしです</p>
                 <div className={styles.image_wrapper}>
@@ -31,9 +31,31 @@ const Make = () => {
         )
     }
 
+    const PrVideo = () => {
+        const text = (
+            <div className={styles.wrapper}>
+                <p className="bold_font">無料見積いたします。ご相談ください。</p>
+                <p>↓すずらんのPR映像です</p>
+                <div className={styles.image_wrapper}>
+                    <Image src={chirashiImage_1} width={700} height={500} loading="lazy" />
+                </div>
+            </div>
+        )
+
+        return (
+            <>
+                <Content
+                    contentTitle="PR映像作成します"
+                    text={text}
+                />
+            </>
+        )
+    }
+
     return (
         <div className={styles.make}>
             <Chirashi />
+            <PrVideo />
         </div>
     )
 }
