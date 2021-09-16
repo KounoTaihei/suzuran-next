@@ -3,7 +3,6 @@ import styles from '../styles/Content.module.scss';
 import Image from 'next/image';
 
 const Content = (props: Props) => {
-
     // 画像があればimage-fieldを表示する
     const renderImageField = () => {
         if(props.image){
@@ -16,7 +15,7 @@ const Content = (props: Props) => {
     }
 
     return (
-        <div className={styles.content}>
+        <div className={styles.content} id={props.id && props.id}>
             <h3 className={styles.content_title}>{props.contentTitle}</h3>
             {/* 画像がある場合はflexクラスを追加 */}
             <div className={props.image ? `${styles.content_body} ${styles.flex}` : styles.content_body}>
@@ -34,6 +33,7 @@ export default Content;
 interface Props {
     contentTitle: string
     text: ReactElement
+    id?: string
     image?: StaticImageData
     alt?: string
 }
