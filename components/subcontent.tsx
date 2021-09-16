@@ -54,7 +54,7 @@ const Subcontent = () => {
                         </tbody>
                     </table>
                 </div>
-                <Link href="/about#timetable">
+                <Link href="/about#timetable" passHref>
                     <a className={styles.link}>
                         <FontAwesomeIcon icon={faLink} /> 詳しい時間割
                     </a>

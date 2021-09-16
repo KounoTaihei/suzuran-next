@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div className={styles.header}>
             <nav className={styles.navbar}>
-                <Link href="/">
+                <Link href="/" passHref>
                     <h1 className={styles.h1}>
                         <span className={styles.img_wrapper}>
                             <Image

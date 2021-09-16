@@ -60,7 +60,7 @@ const Nav = () => {
             <ul className={styles.nav_items}>
                 {items.map(item =>
                     <li key={item.text} className={router.pathname === item.link ? `${styles.nav_item} ${styles.active}` : styles.nav_item}>
-                        <Link href={item.link}>
+                        <Link href={item.link} passHref>
                             <a className={styles.nav_link}>
                                 <Image src={router.pathname === item.link ? item.activeImage : item.image} className={styles.nav_img} width={25} height={25} />
                                 <p className={styles.nav_text}>&thinsp;{item.text}</p>
