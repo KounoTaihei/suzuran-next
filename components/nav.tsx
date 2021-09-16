@@ -62,7 +62,7 @@ const Nav = () => {
                     <li key={item.text} className={router.pathname === item.link ? `${styles.nav_item} ${styles.active}` : styles.nav_item}>
                         <Link href={item.link} passHref>
                             <a className={styles.nav_link}>
-                                <Image src={router.pathname === item.link ? item.activeImage : item.image} className={styles.nav_img} width={25} height={25} />
+                                <Image alt={`${item.text}ページへのリンク画像`} src={router.pathname === item.link ? item.activeImage : item.image} className={styles.nav_img} width={25} height={25} loading="lazy" />
                                 <p className={styles.nav_text}>&thinsp;{item.text}</p>
                             </a>
                         </Link>

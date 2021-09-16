@@ -2,7 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   env: {
-    SERVICE_DOMAIN: process.env.SERVICE_DOMAIN,
-    API_KEY: process.env.API_KEY
+    SENDMAIL_API_URL: process.env.SENDMAIL_API_URL
   }
 }

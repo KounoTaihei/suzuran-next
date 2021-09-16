@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import Content from '../../components/content'
 import styles from '../../styles/Questions.module.scss';
-import Link from 'next/link';
 
 const Questions = () => {
     const [ open, setOpen ] = useState<number>(0);
@@ -42,6 +41,7 @@ const Questions = () => {
             {items.map((item, i) =>
                 <>
                     <div
+                        key={i}
                         className={open === i + 1 || open === 0 ? `${styles.baloon} ${styles.question} ${styles.open}` : `${styles.baloon} ${styles.question}`}
                         onClick={() => {
                             if(open === i + 1) {
@@ -63,14 +63,14 @@ const Questions = () => {
                             </span>
                         </div>
                     </div>
-                        <div className={open === i + 1 ? `${styles.baloon} ${styles.answer} ${styles.open}` : `${styles.baloon} ${styles.answer}`}>
-                            <span className={styles.iconWrapper}>
+                    <div className={open === i + 1 ? `${styles.baloon} ${styles.answer} ${styles.open}` : `${styles.baloon} ${styles.answer}`}>
+                        <span className={styles.iconWrapper}>
                                 <FontAwesomeIcon icon={faExclamationCircle} />
-                            </span>
-                            <div>
-                                {item.answer}
-                            </div>
+                        </span>
+                        <div>
+                            {item.answer}
                         </div>
+                    </div>
                 </>
             )}
         </div>
