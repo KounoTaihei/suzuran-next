@@ -2,6 +2,7 @@ import { faChevronDown, faExclamationCircle, faQuestionCircle } from '@fortaweso
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import Content from '../../components/content'
+import { Meta } from '../../components/meta';
 import styles from '../../styles/Questions.module.scss';
 
 const Questions = () => {
@@ -77,6 +78,10 @@ const Questions = () => {
 
     return (
         <>
+            <Meta
+                title="Q & A"
+                description=""
+            />
             <Content
                 contentTitle="Q & A"
                 text={text}

@@ -5,6 +5,7 @@ import { Formik } from 'formik';
 import { useState } from 'react';
 import * as Yup from 'yup';
 import Content from '../../components/content';
+import { Meta } from '../../components/meta';
 import styles from '../../styles/Contact.module.scss';
 
 const apiUrl = process.env.SENDMAIL_API_URL!;
@@ -87,6 +88,10 @@ const Contact = () => {
 
     return (
         <>
+            <Meta
+                title="お問い合わせ"
+                description=""
+            />
             <Content
                 contentTitle='お問い合わせ'
                 text={text}

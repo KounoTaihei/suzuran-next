@@ -13,17 +13,21 @@ import { getDate } from '../functions/get_date';
 import { getDay } from '../functions/get_day';
 
 const Subcontent = () => {
-    const [ closed, setClosed ] = useState<Closed[]>([])
+    const [ fetching, setFetching ] = useState(false);
+    const [ closed, setClosed ] = useState<Closed[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
+            setFetching(true);
             const result: Closed[] = await client.get<CmsResponse>({
                 endpoint: 'closed',
             })
             .then(res => res.contents)
             
-            setClosed(result);
-            console.log(result);
+            setTimeout(() => {
+                setClosed(result);
+                setFetching(false)
+            }, 1000)
         }
         
         fetchData();
@@ -70,7 +74,8 @@ const Subcontent = () => {
                 <p className={styles.item_name}>休校日</p>
                 <div className={styles.item_body}>
                     <ul className={styles.closed_list}>
-                        {closedDates}
+                        {fetching && <div className={styles.loader}>Loading...</div>}
+                        {!fetching && closedDates}
                     </ul>
                 </div>
             </div>

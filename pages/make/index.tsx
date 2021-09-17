@@ -3,6 +3,7 @@ import Image from 'next/image';
 import chirashiImage_1 from '../../public/003.png';
 import chirashiImage_2 from '../../public/004.png';
 import Content from '../../components/content';
+import { Meta } from '../../components/meta';
 
 const Make = () => {
     const Chirashi = () => {
@@ -53,10 +54,16 @@ const Make = () => {
     }
 
     return (
-        <div className={styles.make}>
-            <Chirashi />
-            <PrVideo />
-        </div>
+        <>
+            <Meta
+                title="ちらし作成・PR画像作成について"
+                description=""
+            />
+            <div className={styles.make}>
+                <Chirashi />
+                <PrVideo />
+            </div>
+        </>
     )
 }
 

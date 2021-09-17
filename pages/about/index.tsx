@@ -4,6 +4,7 @@ import Image from 'next/image';
 import firstFeeImage from '../../public/Suzu_Homepage_Icon01.png';
 import textBookImage from '../../public/Suzu_Homepage_Icon02.png';
 import monthlyFeeImage from '../../public/Suzu_Homepage_Icon03.png';
+import { Meta } from '../../components/meta';
 
 const About = () => {
     /** コース紹介 */
@@ -312,11 +313,17 @@ const About = () => {
     }
 
     return (
-        <div className={styles.about}>
-            <Course />
-            <Fee />
-            <TimeTable />
-        </div>
+        <>
+            <Meta
+                title="教室紹介ページ"
+                description=""
+            />
+            <div className={styles.about}>
+                <Course />
+                <Fee />
+                <TimeTable />
+            </div>
+        </>
     )
 }
 

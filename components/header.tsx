@@ -14,7 +14,7 @@ const Header = () => {
                                 className={styles.logo}
                                 src={headerImage}
                                 alt="大分市の初心者向けパソコン教室のアイコン"
-                                height={46}
+                                height={42}
                                 width={184}
                             />
                         </span>
