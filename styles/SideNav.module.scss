@@ -121,6 +121,12 @@
 }
 
 @media screen and (min-width: 540px) {
+    .toggle_button {
+        display: none;
+    }
+    .overlay {
+        display: none;
+    }
     .sidenav {
         display: none;
     }

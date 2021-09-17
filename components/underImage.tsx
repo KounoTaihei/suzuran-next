@@ -45,6 +45,11 @@ const UnderImageField = () => {
     }
 
     useEffect(() => {
+        if(document.getElementById('underimage')) {
+            if(document.getElementById('underimage')?.style.opacity) {
+                document.getElementById('underimage')!.style.opacity = "";
+            }
+        }
         rizeImages();
     },[])
 
