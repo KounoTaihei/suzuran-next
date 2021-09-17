@@ -11,6 +11,7 @@ import { client } from '../libs/client';
 import { Closed } from '../types/closed';
 import { getDate } from '../functions/get_date';
 import { getDay } from '../functions/get_day';
+import { ids } from '../libs/ids';
 
 const Subcontent = () => {
     const [ fetching, setFetching ] = useState(false);
@@ -63,7 +64,7 @@ const Subcontent = () => {
                         </tbody>
                     </table>
                 </div>
-                <Link href="/about#timetable" passHref>
+                <Link href={`/about#${ids.about.timetable}`} passHref>
                     <a className={styles.link}>
                         <FontAwesomeIcon icon={faLink} /> 詳しい時間割
                     </a>

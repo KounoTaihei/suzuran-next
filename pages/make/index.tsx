@@ -4,6 +4,7 @@ import chirashiImage_1 from '../../public/003.png';
 import chirashiImage_2 from '../../public/004.png';
 import Content from '../../components/content';
 import { Meta } from '../../components/meta';
+import { ids } from '../../libs/ids';
 
 const Make = () => {
     const Chirashi = () => {
@@ -27,6 +28,7 @@ const Make = () => {
                 <Content
                     contentTitle="ちらし作成します"
                     text={text}
+                    id={ids.make.chirashi}
                 />
             </>
         )
@@ -48,6 +50,7 @@ const Make = () => {
                 <Content
                     contentTitle="PR映像作成します"
                     text={text}
+                    id={ids.make.prvideo}
                 />
             </>
         )

@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import Content from '../../components/content'
 import { Meta } from '../../components/meta';
+import { ids } from '../../libs/ids';
 import styles from '../../styles/Questions.module.scss';
 
 const Questions = () => {
@@ -85,6 +86,7 @@ const Questions = () => {
             <Content
                 contentTitle="Q & A"
                 text={text}
+                id={ids.questions.questions}
             />
         </>
     )

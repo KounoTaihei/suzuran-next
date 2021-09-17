@@ -1,6 +1,7 @@
 import { ReactChild, useEffect, useState } from "react";
 import Header from "./header";
 import Nav from "./nav";
+import SideNav from './sidenav';
 import Subcontent from "./subcontent";
 import styles from '../styles/Main.module.scss';
 import UnderImageField from "./underImage";
@@ -28,7 +29,6 @@ const Layout = ({ children }: Props) => {
         return (() => {
             window.removeEventListener('scroll', scrollCheck);
         });
-
     },[])
 
     const scrollToTop = () => {
@@ -39,6 +39,7 @@ const Layout = ({ children }: Props) => {
         <>
             <Header />
             <Nav />
+            <SideNav />
             <main className={styles.main}>
                 <div className={styles.main_body}>
                     <div className={styles.main_content}>

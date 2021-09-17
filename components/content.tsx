@@ -33,7 +33,7 @@ export default Content;
 interface Props {
     contentTitle: string
     text: ReactElement
-    id?: string
+    id: string
     image?: StaticImageData
     alt?: string
 }

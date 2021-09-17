@@ -6,6 +6,7 @@ import shoukaiImage from '../public/image_course.jpeg';
 import instructorImage from '../public/1594192173.png';
 import styles from '../styles/Index.module.scss';
 import { Meta } from '../components/meta';
+import { ids } from '../libs/ids';
 
 const Home: NextPage = () => {
   /** 教室紹介部分 */
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
         <Content
             contentTitle = '教室の紹介'
             text = {text}
+            id={ids.home.shoukai}
             image = {shoukaiImage}
             alt = "教室紹介の画像"
         />
@@ -103,6 +105,7 @@ const Home: NextPage = () => {
         <Content
           contentTitle="教室の特徴"
           text={text}
+          id={ids.home.tokuchou}
         />
       </>
     )
@@ -124,6 +127,7 @@ const Home: NextPage = () => {
         <Content
             contentTitle = 'インストラクター紹介'
             text = {text}
+            id={ids.home.instructor}
             image = {instructorImage}
             alt = "インストラクターの画像"
         />

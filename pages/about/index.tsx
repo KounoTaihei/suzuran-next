@@ -5,6 +5,7 @@ import firstFeeImage from '../../public/Suzu_Homepage_Icon01.png';
 import textBookImage from '../../public/Suzu_Homepage_Icon02.png';
 import monthlyFeeImage from '../../public/Suzu_Homepage_Icon03.png';
 import { Meta } from '../../components/meta';
+import { ids } from '../../libs/ids';
 
 const About = () => {
     /** コース紹介 */
@@ -99,6 +100,7 @@ const About = () => {
                 <Content
                     contentTitle="コース紹介"
                     text={text}
+                    id={ids.about.course}
                 />
             </>
         )
@@ -242,6 +244,7 @@ const About = () => {
                 <Content
                     contentTitle="料金体系"
                     text={getText()}
+                    id={ids.about.fee}
                 />
             </>
         )
@@ -306,7 +309,7 @@ const About = () => {
                 <Content
                     contentTitle="時間割"
                     text={text}
-                    id="timetable"
+                    id={ids.about.timetable}
                 />
             </>
         )
