@@ -6,33 +6,38 @@ import QRImage from '../public/LINE_QRCode.png';
 import { faPhoneSquare, faEnvelope, faLink, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faLine } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
+import { client } from '../libs/client';
+import { Closed } from '../types/closed';
+import { getDate } from '../functions/get_date';
+import { getDay } from '../functions/get_day';
 
 const Subcontent = () => {
-    const closedItem = [
-        {
-            year : 2021,
-            month: 5,
-            date : [
-                '12日(水)','17日(月)','21日(金)','27日(木)'
-            ]
-        },
-        {
-            year : 2021,
-            month: 6,
-            date: [
-                '2日(水)','7日(月)','11日(金)','17日(木)','23(水)'
-            ]
+    const [ closed, setClosed ] = useState<Closed[]>([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result: Closed[] = await client.get<CmsResponse>({
+                endpoint: 'closed',
+            })
+            .then(res => res.contents)
+            
+            setClosed(result);
+            console.log(result);
         }
-    ]
+        
+        fetchData();
+    },[])
 
     // 休校日のhtmlを生成
-    const renderClosedItems = closedItem.map((item, i) => 
-        <li key={i} className={styles.list_item}>
-            <p className={styles.p}>・{item['year']}/{item['month']}月の休校日</p>
+    const closedDates = closed.map(item => 
+        <li key={item.id} className={styles.list_item}>
+            <p className={styles.p}>・{item.year}/{item.month}月の休校日</p>
             <p className={styles.p}>
-                {item['date'].map((date, i) =>
+                {item.dates.map((date, i) =>
                     <span key={i}>
-                        {date}&ensp;
+                        {`${getDate(date.date)}(${getDay(date.date)})`}
+                        {i + 1 !== item.dates.length && '、'}
                     </span>
                 )}
             </p>
@@ -65,7 +70,7 @@ const Subcontent = () => {
                 <p className={styles.item_name}>休校日</p>
                 <div className={styles.item_body}>
                     <ul className={styles.closed_list}>
-                        {renderClosedItems}
+                        {closedDates}
                     </ul>
                 </div>
             </div>
@@ -109,3 +114,7 @@ const Subcontent = () => {
 }
 
 export default Subcontent;
+
+interface CmsResponse {
+    contents: Closed[]
+}

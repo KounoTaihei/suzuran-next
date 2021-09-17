@@ -39,9 +39,8 @@ const Questions = () => {
                 ここでは、今まであった問い合わせや、皆さんが気になるパソコン教室のＱ＆Ａについて色々と書いていきたいと思います！
             </div>
             {items.map((item, i) =>
-                <>
+                <div key={i}>
                     <div
-                        key={i}
                         className={open === i + 1 || open === 0 ? `${styles.baloon} ${styles.question} ${styles.open}` : `${styles.baloon} ${styles.question}`}
                         onClick={() => {
                             if(open === i + 1) {
@@ -71,7 +70,7 @@ const Questions = () => {
                             {item.answer}
                         </div>
                     </div>
-                </>
+                </div>
             )}
         </div>
     )
