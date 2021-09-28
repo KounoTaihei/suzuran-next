@@ -5,6 +5,7 @@ import chirashiImage_2 from '../../public/004.png';
 import Content from '../../components/content';
 import { Meta } from '../../components/meta';
 import { ids } from '../../libs/ids';
+import YouTube from 'react-youtube';
 
 const Make = () => {
     const Chirashi = () => {
@@ -35,13 +36,12 @@ const Make = () => {
     }
 
     const PrVideo = () => {
+
         const text = (
             <div className={styles.wrapper}>
                 <p className="bold_font">無料見積いたします。ご相談ください。</p>
                 <p>↓すずらんのPR映像です</p>
-                <div className={styles.image_wrapper}>
-                    <Image src={chirashiImage_1} alt="" width={700} height={500} loading="lazy" />
-                </div>
+                <YouTube videoId="6x9IsuEankk" className={styles.iframe} containerClassName={styles.youtube} />
             </div>
         )
 
