@@ -9,7 +9,6 @@
     z-index: 10;
 
     .content_title {
-        font-size: 1.6em;
         padding: 5px;
         width: fit-content;
         margin-left: auto;
@@ -51,6 +50,9 @@
 }
 
 @media screen and (min-width: 540px) {
+    .content_title {
+        font-size: 1.6em;
+    }
     .content_body {
         .image_field {
             width: 50%;
@@ -68,6 +70,7 @@
         margin: 10px 0;
 
         &_title {
+            font-size: 1.3em;
             margin: 10px 0;
         }
 
