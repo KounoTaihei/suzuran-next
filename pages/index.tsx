@@ -129,7 +129,8 @@ const Home: NextPage = () => {
             text = {text}
             id={ids.home.instructor}
             image = {instructorImage}
-            alt = "インストラクターの画像"
+            alt = "教室長の画像"
+            imageSize={"180"}
         />
       </>
     )

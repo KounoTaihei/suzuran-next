@@ -7,7 +7,8 @@ export const ids = {
     about: {
         course: "course",
         fee: "fee",
-        timetable: "timetable"
+        timetable: "timetable",
+        certification: "certification"
     },
     make: {
         chirashi: "flyer",

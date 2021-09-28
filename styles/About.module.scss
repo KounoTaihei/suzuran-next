@@ -179,6 +179,35 @@
     }
 }
 
+// 資格
+.certification {
+    text-align: center;
+
+    .section {
+        margin-bottom: 0.5rem;
+    }
+
+    .table {
+        margin: 0 auto;
+        padding: 1rem 0.5rem;
+
+        th {
+            padding: 0.5rem;
+        }
+    }
+
+    .strong {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $mainColor;
+    }
+
+    .bold {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
+
 @media screen and (max-width: 540px) {
     .courses {
         .table {

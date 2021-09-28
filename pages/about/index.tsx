@@ -315,6 +315,47 @@ const About = () => {
         )
     }
 
+    const Certification = () => {
+        const text = (
+            <div className={styles.certification}>
+                <div className={styles.section}>
+                    <span className={styles.bold}>ワード</span>や<span className={styles.bold}>エクセル</span>など、資格を取得する事ができます。
+                </div>
+                <table className={styles.table}>
+                    <thead>
+                        <tr><th colSpan={2}>サーティファイ</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th>ワード</th><td>３級、２級、１級</td></tr>
+                        <tr><th>エクセル</th><td>３級、２級、１級</td></tr>
+                        <tr><th>イラストレーター</th><td>スタンダード、エキスパート</td></tr>
+                        <tr><th>フォトショップ</th><td>スタンダード、エキスパート</td></tr>
+                        <tr><th>ウェブクリエイター</th><td>スタンダード、エキスパート　など</td></tr>
+                    </tbody>
+                </table>
+                <div className={styles.section}>
+                    <span className={styles.strong}>履歴書の資格欄に書ける資格です。</span><br></br>
+                    こちらの教室で受けられます。<br></br>
+                    お気軽にご相談ください。
+                </div>
+                <div className={styles.section}>
+                    <span className={styles.bold}>次回試験日は</span><br></br>
+                    <span className={styles.strong}>随時受け付けてます。</span>
+                </div>
+            </div>
+        );
+
+        return (
+            <>
+                <Content
+                    contentTitle="資格取得について"
+                    text={text}
+                    id="certification"
+                />
+            </>
+        )
+    }
+
     return (
         <>
             <Meta
@@ -325,6 +366,7 @@ const About = () => {
                 <Course />
                 <Fee />
                 <TimeTable />
+                <Certification />
             </div>
         </>
     )

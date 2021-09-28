@@ -25,6 +25,9 @@ const SideNav = () => {
                 document.getElementById('underimage')!.style.opacity = "0.1";
             }
         }
+        if(accordion !== 0) {
+            setAccordion(0);
+        }
     },[open])
 
     useEffect(() => {
@@ -82,6 +85,10 @@ const SideNav = () => {
                 {
                     text: "時間割",
                     id: ids.about.timetable
+                },
+                {
+                    text: "資格について",
+                    id: ids.about.certification
                 }
             ]
         },
