@@ -92,7 +92,7 @@ const Subcontent = () => {
                         玉井コーポ101号
                     </p>
                     <Image src={mapImage} alt="教室の地図の画像" loading="lazy" />
-                    <a className={styles.google} target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%81%8F%E3%82%89%E3%81%B6+%E3%81%99%E3%81%9A%E3%82%89%E3%82%93/@33.2420837,131.6668932,16z/data=!4m5!3m4!1s0x35469e139f18909f:0xff4ebe33efa0d869!8m2!3d33.2421166!4d131.6671352">
+                    <a className={styles.google} target="_blank" rel="noreferrer" href="https://www.google.com/maps/place/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%81%8F%E3%82%89%E3%81%B6+%E3%81%99%E3%81%9A%E3%82%89%E3%82%93/@33.2420837,131.6668932,15z/data=!4m5!3m4!1s0x35469e139f18909f:0xff4ebe33efa0d869!8m2!3d33.2421166!4d131.6671352">
                         <FontAwesomeIcon icon={faMapMarkerAlt} /> Google Map
                     </a>
                 </div>

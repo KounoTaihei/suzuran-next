@@ -32,8 +32,8 @@ const Home: NextPage = () => {
             contentTitle = '教室の紹介'
             text = {text}
             id={ids.home.shoukai}
-            image = {shoukaiImage}
-            alt = "教室紹介の画像"
+            image={shoukaiImage}
+            alt="教室紹介の画像"
         />
       </>
     )
@@ -131,6 +131,7 @@ const Home: NextPage = () => {
             image = {instructorImage}
             alt = "教室長の画像"
             imageSize={"180"}
+            instructor={true}
         />
       </>
     )

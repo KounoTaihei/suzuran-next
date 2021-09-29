@@ -50,16 +50,30 @@
 }
 
 @media screen and (min-width: 540px) {
-    .content_title {
-        font-size: 1.6em;
-    }
-    .content_body {
-        .image_field {
-            width: 50%;
+    .content {
+        &_title {
+            font-size: 1.6em;
+        }
+        &_body {
+            .image_field {
+                width: 50%;
+            }
+            
+            .text_field.flex {
+                width: 50%;
+            }
         }
 
-        .text_field.flex {
-            width: 50%;
+        &.instructor {
+            .content_body {
+                .image_field {
+                    width: 35%;
+                }
+                
+                .text_field.flex {
+                    width: 65%;
+                }
+            }
         }
     }
 }

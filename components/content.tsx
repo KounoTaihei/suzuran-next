@@ -15,7 +15,7 @@ const Content = (props: Props) => {
     }
 
     return (
-        <div className={styles.content} id={props.id && props.id}>
+        <div className={props.instructor === true ? `${styles.content} ${styles.instructor}` : styles.content} id={props.id}>
             <h3 className={styles.content_title}>{props.contentTitle}</h3>
             {/* 画像がある場合はflexクラスを追加 */}
             <div className={props.image ? `${styles.content_body} ${styles.flex}` : styles.content_body}>
@@ -37,4 +37,5 @@ interface Props {
     image?: StaticImageData
     alt?: string
     imageSize?: string
+    instructor?: boolean
 }
