@@ -1,4 +1,3 @@
-
 import { faCommentDots, faEnvelope, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Formik } from 'formik';

@@ -13,13 +13,15 @@ const Make = () => {
             <div className={styles.wrapper}>
                 <p className="bold_font">無料見積いたします。ご相談ください。</p>
                 <p>↓すずらんのちらしです</p>
-                <div className={styles.image_wrapper}>
-                    <span>（表）</span>
-                    <Image src={chirashiImage_1} alt="すずらんのちらしの画像" width={700} height={500} loading="lazy" />
-                </div>
-                <div className={styles.image_wrapper}>
-                    <span>（裏）</span>
-                    <Image src={chirashiImage_2} alt="すずらんのちらしの画像の裏面" width={700} height={500} loading="lazy" />
+                <div className={styles.image_field}>
+                    <div className={styles.image_wrapper}>
+                        <span>（表）</span>
+                        <Image src={chirashiImage_1} alt="すずらんのちらしの画像" width={700} height={500} loading="lazy" />
+                    </div>
+                    <div className={styles.image_wrapper}>
+                        <span>（裏）</span>
+                        <Image src={chirashiImage_2} alt="すずらんのちらしの画像の裏面" width={700} height={500} loading="lazy" />
+                    </div>
                 </div>
             </div>
         );
@@ -41,7 +43,9 @@ const Make = () => {
             <div className={styles.wrapper}>
                 <p className="bold_font">無料見積いたします。ご相談ください。</p>
                 <p>↓すずらんのPR映像です</p>
-                <YouTube videoId="6x9IsuEankk" className={styles.iframe} containerClassName={styles.youtube} />
+                <div className={styles.video}>
+                    <YouTube videoId="6x9IsuEankk" className={styles.iframe} containerClassName={styles.youtube} />
+                </div>
             </div>
         )
 
