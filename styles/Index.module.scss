@@ -4,7 +4,6 @@
     // 教室特徴部分
     .school_detail_items {
         margin: 0;
-        padding: 0;
 
         .detail_item {
             list-style: none;
@@ -18,8 +17,18 @@
     }
 }
 
+@media screen and (min-width: 540px) {
+    .school_detail_items {
+        padding: 1rem;
+    }
+}
+
 @media screen and (max-width: 540px) {
-    .detail_item_title {
-        text-align: center;
+    .school_detail_items {
+        padding: 0;
+
+        .detail_item_title {
+            text-align: center;
+        }
     }
 }

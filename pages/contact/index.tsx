@@ -76,7 +76,6 @@ const Contact = () => {
                                 )}
                             </div>
                             <div className={styles.actions}>
-                                <button type="button" onClick={props.handleReset} className={styles.cancel}>入力を削除</button>
                                 <button type="submit" disabled={getDisabled(props.errors, props.touched)} className={getDisabled(props.errors, props.touched) ? `${styles.submit} ${styles.disabled}` : styles.submit}>送信</button>
                             </div>
                         </form>
@@ -90,7 +89,6 @@ const Contact = () => {
         <>
             <Meta
                 title="お問い合わせ"
-                description=""
             />
             <Content
                 contentTitle='お問い合わせ'

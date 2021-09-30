@@ -1,11 +1,11 @@
 import styles from '../../styles/Make.module.scss';
 import Image from 'next/image';
-import chirashiImage_1 from '../../public/003.png';
-import chirashiImage_2 from '../../public/004.png';
+import chirashiImage_1 from '../../public/chirashi2021.7-01.png';
+import chirashiImage_2 from '../../public/chirashi2021.7-02.png';
 import Content from '../../components/content';
-import { Meta } from '../../components/meta';
 import { ids } from '../../libs/ids';
 import YouTube from 'react-youtube';
+import { Meta } from '../../components/meta';
 
 const Make = () => {
     const Chirashi = () => {
@@ -63,8 +63,7 @@ const Make = () => {
     return (
         <>
             <Meta
-                title="ちらし作成・PR画像作成について"
-                description=""
+                title="ちらし等作成します"
             />
             <div className={styles.make}>
                 <Chirashi />

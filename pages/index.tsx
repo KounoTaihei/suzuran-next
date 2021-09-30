@@ -5,8 +5,8 @@ import Content from '../components/content';
 import shoukaiImage from '../public/image_course.jpeg';
 import instructorImage from '../public/1594192173.png';
 import styles from '../styles/Index.module.scss';
-import { Meta } from '../components/meta';
 import { ids } from '../libs/ids';
+import { Meta } from '../components/meta';
 
 const Home: NextPage = () => {
   /** 教室紹介部分 */
@@ -139,10 +139,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Meta
-        title="トップページ"
-        description=""
-      />
+      <Meta />
       <div className={styles.index}>
         <Shoukai />
         <Tokucho />
