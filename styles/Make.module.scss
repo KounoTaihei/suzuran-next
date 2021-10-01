@@ -3,7 +3,7 @@
         text-align: center;
 
         .image_field {
-            display: flex;
+            // display: flex;
 
             .image_wrapper {
                 display: flex;
@@ -28,6 +28,16 @@
             right: 0;
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .make {
+        .wrapper {
+            .image_field {
+                display: flex;
+            }
         }
     }
 }
