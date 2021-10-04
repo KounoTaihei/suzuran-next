@@ -81,7 +81,6 @@ const Questions = () => {
         <>
             <Meta
                 title="Q & A"
-                description=""
             />
             <Content
                 contentTitle="Q & A"

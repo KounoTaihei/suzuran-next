@@ -4,8 +4,8 @@ import Image from 'next/image';
 import firstFeeImage from '../../public/Suzu_Homepage_Icon01.png';
 import textBookImage from '../../public/Suzu_Homepage_Icon02.png';
 import monthlyFeeImage from '../../public/Suzu_Homepage_Icon03.png';
-import { Meta } from '../../components/meta';
 import { ids } from '../../libs/ids';
+import { Meta } from '../../components/meta';
 
 const About = () => {
     /** コース紹介 */
@@ -128,9 +128,11 @@ const About = () => {
                         </tbody>
                     </table>
                     <div className={styles.fee_heading_text}>
-                        <div className={styles.under_line_text}>設備維持料金、駐車場料金等、パソコン使用料</div>
-                        <div className={styles.border_text}>一切かかりません！</div>
-                        <div className={styles.color_text}>全て月謝に含まれております！</div>
+                        <div>
+                            設備維持料金、駐車場料金等、パソコン使用料<br></br>
+                            一切かかりません！<br></br>
+                            全て月謝に含まれております！
+                        </div>
                     </div>
                 </div>
             );
@@ -140,35 +142,35 @@ const About = () => {
             const items = [
                 {
                     course : '月4回コース',
-                    fee : '6,000',
+                    fee : '6,200',
                     text : 'おためしコース、ゆっくりマイペース型',
                 },
                 {
                     course : '月8回コース',
-                    fee : '10,800',
+                    fee : '11,200',
                     text : '標準しっかり型、主婦向け',
                     heading : '人気♪'
                 },
                 {
                     course : '月10回コース',
-                    fee : '12,000',
+                    fee : '12,500',
                     text : '充実お仕事型、がっちり勉強したい方むけです。',
                     heading : '一番人気♪'
                 },
                 {
                     course : '月16回コース',
-                    fee : '18,400',
+                    fee : '19,200',
                     text : '特訓お急ぎ型、学生さん・就職対策向け',
                 },
                 {
                     course : '月20回コース',
-                    fee : '21,000',
-                    text : '学生さん・就職対策向け【授業一コマあたり単価1,050円！】 '
+                    fee : '22,000',
+                    text : '学生さん・就職対策向け【授業一コマあたり単価1,100円！】 '
                 },
                 {
                     course : '月40回コース',
-                    fee : '38,000',
-                    text : <>学生さん・就職対策向け、なんと26回分の料金で40回まで受講できます。<br></br>【授業一コマあたり単価950円！】</>,
+                    fee : '40,000',
+                    text : <>学生さん・就職対策向け、なんと26回分の料金で40回まで受講できます。<br></br>【授業一コマあたり単価1000円！】</>,
                 }
             ];
 
@@ -181,7 +183,7 @@ const About = () => {
                                 <div>
                                     <h5>
                                         入会金
-                                        <span className={styles.fee_body_fee}>10,800</span>
+                                        <span className={styles.fee_body_fee}>11,000</span>
                                         円（税込）
                                     </h5>
                                 </div>
@@ -221,7 +223,7 @@ const About = () => {
                     <p>
                         多く受講するほど学習スピードも増し、料金もお得です。(^^♪<br></br>
                         『回数』は『１ヶ月あたりの回数』ですので、１ヶ月以内の消化をお願いします。<br></br><br></br>
-                        一番最高の割引きはなんと１コマ950円！！！！！<br></br>
+                        一番最高の割引きはなんと１コマ1000円！！！！！<br></br>
                         <span className={styles.star}>☆</span> お得な家族割もあります!!（それぞれの月謝料から1割引き）<br></br><br></br>
                         詳しくはお電話下さい！ <a href="tel:097-579-6315"><span className="color_font">097-579-6315</span></a>
                     </p>
@@ -359,8 +361,7 @@ const About = () => {
     return (
         <>
             <Meta
-                title="教室紹介ページ"
-                description=""
+                title="教室について"
             />
             <div className={styles.about}>
                 <Course />
