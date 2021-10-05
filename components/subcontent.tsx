@@ -106,7 +106,7 @@ const Subcontent = () => {
                         <li className={styles.li}><FontAwesomeIcon icon={faEnvelope} className={styles.icon} /> <Link href="/contact"><a>メールでお問い合わせ</a></Link></li>
                         <li className={styles.li}>
                             <span className={styles.line_color}><FontAwesomeIcon icon={faLine} className={styles.icon} /> LINE</span>でお問い合わせ<br></br>
-                            <span style={{fontSize: '0.8em'}}>( アドレスをクリックするかQRコードを読み取ってください。 )</span>
+                            <span style={{fontSize: '0.8em'}}>(アドレスをクリックするかQRコードを読み取ってください。)</span>
                             <div className={styles.line_contact}>
                                 <Image src={QRImage} width={75} height={75} alt="LINEのQRコードの画像" loading="lazy" />
                                 <a href="https://lin.ee/7tZpA9w" target="_blank" rel="noreferrer">https://lin.ee/7tZpA9w</a>

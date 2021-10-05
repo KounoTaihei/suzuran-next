@@ -1,7 +1,5 @@
 @import '../styles/variables';
 
-$errorColor: rgb(212, 104, 104);
-
 .contact {
     text-align: center;
     margin-bottom: 30px;
@@ -81,6 +79,46 @@ $errorColor: rgb(212, 104, 104);
             }
         }
     }
+
+    .other {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: top;
+        margin-top: 2rem;
+
+        .flex_item {
+            padding: 1rem 0;
+        }
+
+        .line_contact {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .small {
+            font-size: 0.8rem;
+        }
+
+        .line_color {
+            color: $lineColor;
+        }
+
+        .phone_color {
+            color: $phoneColor;
+        }
+
+        .phone_contact {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -91,6 +129,10 @@ $errorColor: rgb(212, 104, 104);
             .textInput {
                 width: 80%;
             }
+        }
+
+        .other {
+            flex-direction: column;
         }
     }
 }

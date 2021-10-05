@@ -1,4 +1,5 @@
-import { faCommentDots, faEnvelope, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+import { faLine } from '@fortawesome/free-brands-svg-icons';
+import { faCommentDots, faEnvelope, faExclamationCircle, faPhoneSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Formik } from 'formik';
 import { useState } from 'react';
@@ -7,6 +8,8 @@ import Content from '../../components/content';
 import { Meta } from '../../components/meta';
 import { ids } from '../../libs/ids';
 import styles from '../../styles/Contact.module.scss';
+import QRImage from '../../public/LINE_QRCode.png';
+import Image from 'next/image';
 
 const apiUrl = process.env.SENDMAIL_API_URL!;
 
@@ -81,6 +84,22 @@ const Contact = () => {
                         </form>
                     )}
                 />
+                <div className={styles.other}>
+                    <div className={styles.flex_item}>
+                        <div><span className={styles.line_color}><FontAwesomeIcon icon={faLine} className={styles.icon} /> LINE</span>でお問い合わせ</div>
+                        <div>
+                            <span className={styles.small}>(アドレスをクリックするかQRコードを読み取ってください。)</span>
+                            <div className={styles.line_contact}>
+                                <Image src={QRImage} width={75} height={75} alt="LINEのQRコードの画像" loading="lazy" />
+                                <a href="https://lin.ee/7tZpA9w" target="_blank" rel="noreferrer">https://lin.ee/7tZpA9w</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.flex_item}>
+                        <div><span className={styles.phone_color}><FontAwesomeIcon icon={faPhoneSquare} className={styles.icon} /> 電話</span>でお問い合わせ</div>
+                        <div className={styles.phone_contact}><a href="tel:097-579-6315">097-579-6315</a></div>
+                    </div>
+                </div>
             </div>
         </>
     )
