@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { NextPage } from 'next';
 import Content from '../components/content';
 import shoukaiImage from '../public/image_course.jpeg';
-import instructorImage from '../public/1594192173.png';
+import instructorImage from '../public/edit3.jpg';
 import styles from '../styles/Index.module.scss';
 import { ids } from '../libs/ids';
 import { Meta } from '../components/meta';
@@ -130,8 +130,6 @@ const Home: NextPage = () => {
             id={ids.home.instructor}
             image = {instructorImage}
             alt = "教室長の画像"
-            imageSize={"180"}
-            instructor={true}
         />
       </>
     )

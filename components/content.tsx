@@ -8,14 +8,14 @@ const Content = (props: Props) => {
         if(props.image){
             return (
                 <div className={styles.image_field}>
-                    <Image src={props.image} alt={props.alt} loading="lazy" width={props.imageSize && props.imageSize} height={props.imageSize && props.imageSize} />
+                    <Image src={props.image} alt={props.alt} loading="lazy" />
                 </div>
             )
         }
     }
 
     return (
-        <div className={props.instructor === true ? `${styles.content} ${styles.instructor}` : styles.content} id={props.id}>
+        <div className={styles.content} id={props.id}>
             <h3 className={styles.content_title}>{props.contentTitle}</h3>
             {/* 画像がある場合はflexクラスを追加 */}
             <div className={props.image ? `${styles.content_body} ${styles.flex}` : styles.content_body}>
@@ -36,6 +36,4 @@ interface Props {
     id: string
     image?: StaticImageData
     alt?: string
-    imageSize?: string
-    instructor?: boolean
 }
